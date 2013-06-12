@@ -12,14 +12,13 @@
 
 using namespace std;
 
-char *token_list[] = {NULL,"function","variable","integer"};
-
 extern int yylex();
 extern int yylineno;
 extern char* yytext;
 
-int main() 
-{
+char *token_list[] = {NULL,"function","variable","integer"};
+
+int main() {
 	int ntoken=yylex();
 	while(ntoken) {
 		cout<<"Token is "<<token_list[ntoken]<<endl;
